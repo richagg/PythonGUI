@@ -7,9 +7,7 @@
 # from tkinter import *
 from tkinter.messagebox import *
 
-## parameter scaling of the Gini score based on their need
-##parametrize the scale
-
+#------------define a function for calculating the answer --------------#
 def show_answer():
     scale_min = float(num1.get())
     scale_max = float(num2.get())
@@ -19,7 +17,7 @@ def show_answer():
     blank.delete(0,END)
     blank.insert(0, Ans)
 
-
+#------------define the main-This is the front end frame --------------#
 main = Tk()
 Label(main, text = "Range starts from:").grid(row=0)
 Label(main, text = "Range ends at:").grid(row=1)
