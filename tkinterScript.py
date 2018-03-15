@@ -4,24 +4,23 @@
 
 #Things to remember : stuff you read from the input using get() is str. Typecast before doing calculations!
 
-# from tkinter import *
+from tkinter import *
 from tkinter.messagebox import *
 
 #------------define a function for calculating the answer --------------#
 def show_answer():
     scale_min = float(num1.get())
     scale_max = float(num2.get())
-    scaled_score = Risk_Score * (scale_max- scale_min+1) +scale_min
+    scaled_score = 100 * (scale_max- scale_min+1) +scale_min
     Ans = round(scaled_score,4)
-#     Ans = int(num1.get()) + int(num2.get())
-    blank.delete(0,END)
+    blank.delete(0,END) #this deletes the prevoius answer if you want to rerunt he calculation
     blank.insert(0, Ans)
 
 #------------define the main-This is the front end frame --------------#
 main = Tk()
-Label(main, text = "Range starts from:").grid(row=0)
-Label(main, text = "Range ends at:").grid(row=1)
-Label(main, text = "The scaled score :").grid(row=2)
+Label(main, text = "Input1").grid(row=0)
+Label(main, text = "Input2").grid(row=1)
+Label(main, text = "Answer").grid(row=2)
 
 
 
@@ -40,11 +39,7 @@ blank.grid(row=2, column=1)
 Button(main, text='Quit', command=main.destroy).grid(row=4, column=0, sticky=W, pady=4)
 Button(main, text='Show', command=show_answer).grid(row=4, column=1, sticky=W, pady=4)
 
-# mainloop()
 
-# if __name__ == '__main__':
-#     root = Tk()
-main.title("RiskScore")
-# main.geometry("500x400")
-#     app = start_window(root)
+main.title(" Name of my Window")
+# main.geometry("500x400") (use if you want to resize)
 mainloop()
