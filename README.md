@@ -1,2 +1,3 @@
 # PythonGUI
-A small script to get started with Tkinter for front end building
+A small script to get started with Tkinter for building a front end
+
